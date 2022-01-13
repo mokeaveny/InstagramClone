@@ -36,6 +36,7 @@ namespace InstagramClone.Api
 
             services.AddScoped<IUserLogic, UserLogic>();
             services.AddScoped<IPostLogic, PostLogic>();
+            services.AddScoped<ICommentLogic, CommentLogic>();
 
             services.AddScoped<IDbConnection>(db => new SqlConnection(connectionString));
             services.AddScoped<IInstagramCloneRepository, InstagramCloneRepository>();

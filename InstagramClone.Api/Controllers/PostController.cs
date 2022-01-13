@@ -32,15 +32,16 @@ namespace InstagramClone.Api.Controllers
         }
 
         [HttpPost]
-        public async Task CreatePost(int userId, byte[] image, string caption)
+        public async Task CreatePost(int userId, string image, string caption)
         {
-            await postLogic.CreatePost(userId, image, caption);
+            byte[] imageByteFormat = Convert.FromBase64String(image);
+            await postLogic.CreatePost(userId, imageByteFormat, caption);
         }
 
-        [HttpDelete("userId")]
-        public async Task DeletePost(int userId)
+        [HttpDelete]
+        public async Task DeletePost(int postId)
         {
-            await postLogic.DeletePost(userId);
+            await postLogic.DeletePost(postId);
         }
     }
 }

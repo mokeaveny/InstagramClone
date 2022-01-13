@@ -63,7 +63,7 @@ namespace InstagramClone.Api.Repository
         {
             await db.ExecuteScalarAsync<int>(
                 "INSERT INTO dbo.Posts (UserId, Image, Caption) VALUES " +
-                                        "@UserId, @Image, @Caption)", new
+                                        "(@UserId, @Image, @Caption)", new
                                         {
                                             userId,
                                             image,
@@ -78,24 +78,37 @@ namespace InstagramClone.Api.Repository
                 new { postId });
         }
 
-        public Task<Comment> GetComment(int commentId)
+        public async Task<Comment> GetComment(int commentId)
         {
-            throw new NotImplementedException();
+            return (await db.QuerySingleAsync<Comment>(
+                    "SELECT * FROM dbo.Comments WHERE Id = @commentId",
+                     new { commentId }));
         }
 
-        public Task<List<Comment>> GetUserComments(int userId)
+        public async Task<List<Comment>> GetUserComments(int userId)
         {
-            throw new NotImplementedException();
+            return (await db.QueryAsync<Comment>(
+                     "SELECT * FROM dbo.Comments WHERE AuthorId = @userId",
+                     new { userId })).ToList();
+        }   
+
+        public async Task CreateComment(int postId, int authorId, string message)
+        {
+            await db.ExecuteScalarAsync<int>(
+                "INSERT INTO dbo.Comments (PostId, AuthorId, Message) VALUES " +
+                                            "(@PostId, @AuthorId, @Message)", new
+                                            {
+                                                postId,
+                                                authorId,
+                                                message
+                                            });
         }
 
-        public Task CreateComment(int postId, int authorId, string message)
+        public async Task DeleteComment(int commentId)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteComment(int commentId)
-        {
-            throw new NotImplementedException();
+            await db.ExecuteScalarAsync<int>(
+                "DELETE FROM dbo.Comments WHERE Id = @CommentId",
+                new { commentId });
         }
     }
 }
