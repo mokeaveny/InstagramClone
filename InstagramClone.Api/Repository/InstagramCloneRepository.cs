@@ -52,19 +52,30 @@ namespace InstagramClone.Api.Repository
                 new { postId }));
         }
 
-        public Task<List<Post>> GetUserPosts(int userId)
+        public async Task<List<Post>> GetUserPosts(int userId)
         {
-            throw new NotImplementedException();
+            return (await db.QueryAsync<Post>(
+                "SELECT * FROM dbo.Posts WHERE UserId = @userId",
+                new { userId })).ToList();
         }
 
-        public Task CreatePost(int userId, byte[] image, string caption)
+        public async Task CreatePost(int userId, byte[] image, string caption)
         {
-            throw new NotImplementedException();
+            await db.ExecuteScalarAsync<int>(
+                "INSERT INTO dbo.Posts (UserId, Image, Caption) VALUES " +
+                                        "@UserId, @Image, @Caption)", new
+                                        {
+                                            userId,
+                                            image,
+                                            caption
+                                        });
         }
 
-        public Task DeletePost(int postId)
+        public async Task DeletePost(int postId)
         {
-            throw new NotImplementedException();
+            await db.ExecuteScalarAsync<int>(
+                "DELETE FROM dbo.Posts WHERE Id = @postId",
+                new { postId });
         }
 
         public Task<Comment> GetComment(int commentId)

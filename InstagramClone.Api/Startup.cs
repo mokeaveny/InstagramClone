@@ -35,6 +35,7 @@ namespace InstagramClone.Api
             var connectionString = Configuration.GetConnectionString("InstagramCloneDb");
 
             services.AddScoped<IUserLogic, UserLogic>();
+            services.AddScoped<IPostLogic, PostLogic>();
 
             services.AddScoped<IDbConnection>(db => new SqlConnection(connectionString));
             services.AddScoped<IInstagramCloneRepository, InstagramCloneRepository>();
