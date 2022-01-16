@@ -2,7 +2,30 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h1>This is the home page.</h1>
+    <p>From here we will begin to build the main app. I will first start with a user page.</p>
+    <h2><a asp-controller="User" asp-action="Index">User Page</a></h2>
 </div>
+
+<div id="app">
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <div id="app">
+            <h1 class="display-4">{{message}}</h1>
+        </div>
+    </div>
+</div>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                message: 'Hello from Vue'
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>

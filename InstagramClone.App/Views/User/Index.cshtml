@@ -1,0 +1,48 @@
+﻿@model IEnumerable<User>
+
+<div class="text-center">
+    <h1>All Users Can Be Seen Below</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Forename</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Username</td>
+                    <td>@user.Email</td>
+                    <td>@user.Forename</td>
+                    <td>@user.Surname</td>
+                    <td>@user.Age</td>
+                    <td>@user.Rating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="app">
+</div>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                users: [
+                ]
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>

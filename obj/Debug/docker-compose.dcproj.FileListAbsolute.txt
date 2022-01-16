@@ -15,3 +15,11 @@ C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.Views.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.Views.pdb
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.deps.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.runtimeconfig.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.runtimeconfig.dev.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.exe
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.App.pdb
