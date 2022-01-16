@@ -1,0 +1,17 @@
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.Api.deps.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.Api.runtimeconfig.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.Api.runtimeconfig.dev.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\appsettings.Development.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\appsettings.json
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.Api.exe
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.Api.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\System.Data.SqlClient.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\Dapper.dll
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\bin\Debug\InstagramClone.Api.pdb
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\obj\Debug\docker-compose.dcproj.CopyComplete

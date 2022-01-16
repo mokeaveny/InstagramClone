@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  instagramclone.api:
+    build:
+      context: .
+      dockerfile: InstagramClone.Api/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - sql_in_dc
+
+  sql_in_dc:
+    build:
+      context: .
+      dockerfile: sql/sql.Dockerfile
+    restart: always
+    ports:
+      - "1440:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=abcDEF123#

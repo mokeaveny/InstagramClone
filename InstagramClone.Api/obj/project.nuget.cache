@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+oRmaGqAOFalKR/NbmKES/PYLP0JXBP9bn2VTGX6/02/NXVM5XAYUdmWVKgmWppXNaklUH6rpwP+5d1NZJ4HKg==",
+  "dgSpecHash": "zc84ptjxu0WnmPazizlqNuaqwbK27BIyb21SCMI8GW3UDcroz1yj9r3ki9RWlPQixgAvuVFlUSetOAqzKVCsZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\micha\\Documents\\Microservices\\Docker Projects\\InstagramClone\\InstagramClone.Api\\InstagramClone.Api.csproj",
   "expectedPackageFiles": [

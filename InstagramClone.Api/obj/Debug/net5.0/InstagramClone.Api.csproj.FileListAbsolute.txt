@@ -33,3 +33,4 @@ C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramC
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.Api\obj\Debug\net5.0\ref\InstagramClone.Api.dll
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.Api\obj\Debug\net5.0\InstagramClone.Api.pdb
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.Api\obj\Debug\net5.0\InstagramClone.Api.genruntimeconfig.cache
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.Api\obj\Debug\net5.0\InstagramClone.Api.csproj.AssemblyReference.cache

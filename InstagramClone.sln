@@ -5,11 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstagramClone.Api", "InstagramClone.Api\InstagramClone.Api.csproj", "{9756CC9B-907B-402A-8DE5-63DCDCDA9935}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{95F0A16A-F630-4E67-9141-BAE66A5F594A}"
-	ProjectSection(SolutionItems) = preProject
-		sql\CleanTables.sql = sql\CleanTables.sql
-		sql\SeedScript.sql = sql\SeedScript.sql
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstagramClone.App", "InstagramClone.App\InstagramClone.App.csproj", "{91CAA3A6-835C-4821-9540-DB703B772307}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ECE343BD-B24F-4A3F-8FD0-D587F94F4402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +19,14 @@ Global
 		{9756CC9B-907B-402A-8DE5-63DCDCDA9935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9756CC9B-907B-402A-8DE5-63DCDCDA9935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9756CC9B-907B-402A-8DE5-63DCDCDA9935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CAA3A6-835C-4821-9540-DB703B772307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CAA3A6-835C-4821-9540-DB703B772307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CAA3A6-835C-4821-9540-DB703B772307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CAA3A6-835C-4821-9540-DB703B772307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE343BD-B24F-4A3F-8FD0-D587F94F4402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE343BD-B24F-4A3F-8FD0-D587F94F4402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE343BD-B24F-4A3F-8FD0-D587F94F4402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE343BD-B24F-4A3F-8FD0-D587F94F4402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

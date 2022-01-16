@@ -1,0 +1,28 @@
+services:
+  instagramclone.api:
+    build:
+      context: .
+      dockerfile: InstagramClone.Api/Dockerfile
+    depends_on:
+      sql_in_dc:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+    - mode: ingress
+      target: 80
+      published: 8080
+      protocol: tcp
+  sql_in_dc:
+    build:
+      context: .
+      dockerfile: sql/sql.Dockerfile
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: abcDEF123#
+    ports:
+    - mode: ingress
+      target: 1433
+      published: 1440
+      protocol: tcp
+    restart: always
