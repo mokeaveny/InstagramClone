@@ -36,5 +36,11 @@ namespace InstagramClone.Api.Controllers
         {
             await userLogic.CreateUser(username, email, forename, surname, age, rating);
         }
+
+        [HttpPut]
+        public async Task UpdateUser(int userId, string username, string email, string forename, string surname, int age, decimal rating)
+        {
+            await userLogic.UpdateUser(userId, username, email, forename, surname, age, rating);
+        }
     }
 }

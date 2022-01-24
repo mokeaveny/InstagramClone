@@ -11,5 +11,6 @@ namespace InstagramClone.Api.Interfaces
         Task<IEnumerable<User>> GetUsers();
         Task<User> GetUser(int userId);
         Task CreateUser(string username, string email, string forename, string surname, int age, decimal rating);
+        Task UpdateUser(int userId, string username, string email, string forename, string surname, int age, decimal rating);
     }
 }

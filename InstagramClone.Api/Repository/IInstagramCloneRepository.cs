@@ -11,6 +11,7 @@ namespace InstagramClone.Api.Repository
         Task<List<User>> GetUsers();
         Task<User> GetUser(int userId);
         Task CreateUser(string username, string email, string forename, string surname, int age, decimal rating);
+        Task UpdateUser(int userId, string username, string email, string forename, string surname, int age, decimal rating);
         Task<Post> GetPost(int postId);
         Task<List<Post>> GetUserPosts(int userId);
         Task CreatePost(int userId, byte[] image, string caption);

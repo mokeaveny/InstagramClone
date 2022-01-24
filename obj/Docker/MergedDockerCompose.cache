@@ -20,6 +20,8 @@ services:
     depends_on:
       seq_in_dc:
         condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
     ports:
     - mode: ingress
       target: 80

@@ -4,3 +4,6 @@ services:
   instagramclone.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+  instagramclone.app:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

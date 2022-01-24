@@ -22,5 +22,35 @@ namespace InstagramClone.App.Controllers
             var users = await apiClient.GetUsers();
             return View(users);
         }
+
+        public async Task<IActionResult> Details(int userId)
+        {
+            var user = await apiClient.GetUser(userId);
+            Console.WriteLine(userId);
+            return View(user);
+        }
+
+        public async Task<IActionResult> Edit(int userId)
+        {
+            var user = await apiClient.GetUser(userId);
+            return View(user);
+        }
+
+        public IActionResult CreatePage()
+        {
+            return View();
+        }
+
+        public async Task Create(string username, string email, string forename, string surname, int age, decimal rating)
+        {
+            await apiClient.CreateUser(username, email, forename, surname, age, rating);
+        }
+
+        public async Task Update(int userId, string username, string email, string forename, string surname, int age, decimal rating)
+        {
+            Console.WriteLine(userId);
+            Console.WriteLine(username);
+            await apiClient.UpdateUser(userId, username, email, forename, surname, age, rating);
+        }
     }
 }

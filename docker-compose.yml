@@ -18,6 +18,8 @@ services:
       dockerfile: InstagramClone.App/Dockerfile
     ports:
       - "8081:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - seq_in_dc
 

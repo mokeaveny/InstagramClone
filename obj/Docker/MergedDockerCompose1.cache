@@ -1,7 +1,7 @@
 services:
   instagramclone.api:
     build:
-      context: .
+      context: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       dockerfile: InstagramClone.Api/Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
@@ -28,6 +28,8 @@ services:
         dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
     ports:
     - mode: ingress
       target: 80
@@ -76,7 +78,7 @@ services:
         create_host_path: true
   instagramclone.app:
     build:
-      context: .
+      context: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       dockerfile: InstagramClone.App/Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
@@ -91,6 +93,7 @@ services:
     - -f
     - /dev/null
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
@@ -102,6 +105,8 @@ services:
         dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
     ports:
     - mode: ingress
       target: 80
@@ -150,14 +155,19 @@ services:
         create_host_path: true
   sql_in_dc:
     build:
-      context: .
+      context: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       dockerfile: sql/sql.Dockerfile
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: abcDEF123#
+    networks:
+      default: null
     ports:
     - mode: ingress
       target: 1433
       published: 1440
       protocol: tcp
     restart: always
+networks:
+  default:
+    name: dockercompose12630447708695682427_default

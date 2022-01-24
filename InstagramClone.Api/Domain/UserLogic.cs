@@ -36,5 +36,10 @@ namespace InstagramClone.Api.Domain
 
             await repo.CreateUser(username, email, forename, surname, age, rating);
         }
+        public async Task UpdateUser(int userId, string username, string email, string forename, string surname, int age, decimal rating)
+        {
+            logger.LogInformation("Updating the user!");
+            await repo.UpdateUser(userId, username, email, forename, surname, age, rating);
+        }
     }
 }

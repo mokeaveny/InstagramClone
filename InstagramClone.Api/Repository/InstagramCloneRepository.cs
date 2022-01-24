@@ -45,6 +45,23 @@ namespace InstagramClone.Api.Repository
                                         });
         }
 
+        public async Task UpdateUser(int userId, string username, string email, string forename, string surname, int age, decimal rating)
+        {
+            await db.ExecuteScalarAsync<int>(
+                "UPDATE dbo.Users SET Username = @username, Email = @email, Forename = @forename, Surname = @surname," +
+                "Age = @age, Rating = @rating WHERE Id = @userId",
+                new
+                {
+                    userId,
+                    username,
+                    email,
+                    forename,
+                    surname,
+                    age,
+                    rating
+                });
+        }
+
         public async Task<Post> GetPost(int postId)
         {
             return (await db.QuerySingleAsync<Post>(

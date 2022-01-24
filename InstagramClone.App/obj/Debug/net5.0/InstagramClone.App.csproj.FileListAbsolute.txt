@@ -39,3 +39,6 @@ C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramC
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\InstagramClone.App.genruntimeconfig.cache
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\InstagramClone.App.csproj.CopyComplete
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\User\Details.cshtml.g.cs
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\User\Edit.cshtml.g.cs
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\User\CreatePage.cshtml.g.cs
