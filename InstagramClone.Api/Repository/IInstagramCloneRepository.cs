@@ -18,6 +18,7 @@ namespace InstagramClone.Api.Repository
         Task DeletePost(int postId);
         Task<Comment> GetComment(int commentId);
         Task<List<Comment>> GetUserComments(int userId);
+        Task<List<Comment>> GetPostComments(int postId);
         Task CreateComment(int postId, int authorId, string message);
         Task DeleteComment(int commentId);
     }

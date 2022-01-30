@@ -107,7 +107,14 @@ namespace InstagramClone.Api.Repository
             return (await db.QueryAsync<Comment>(
                      "SELECT * FROM dbo.Comments WHERE AuthorId = @userId",
                      new { userId })).ToList();
-        }   
+        }
+
+        public async Task<List<Comment>> GetPostComments(int postId)
+        {
+            return (await db.QueryAsync<Comment>(
+                "SELECT * FROM dbo.Comments WHERE PostId = @postId",
+                new { postId })).ToList();
+        }
 
         public async Task CreateComment(int postId, int authorId, string message)
         {

@@ -31,6 +31,12 @@ namespace InstagramClone.Api.Controllers
             return await commentLogic.GetUserComments(userId);
         }
 
+        [HttpGet("postId")]
+        public async Task<IEnumerable<Comment>> GetPostComments(int postId)
+        {
+            return await commentLogic.GetPostComments(postId);
+        }
+
         [HttpPost]
         public async Task CreateComment(int postId, int authorId, string message)
         {

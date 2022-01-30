@@ -10,6 +10,7 @@ namespace InstagramClone.Api.Interfaces
     {
         Task<Comment> GetComment(int commentId);
         Task<IEnumerable<Comment>> GetUserComments(int userId);
+        Task<IEnumerable<Comment>> GetPostComments(int postId);
         Task CreateComment(int postId, int authorId, string message);
         Task DeleteComment(int commentId);
     }

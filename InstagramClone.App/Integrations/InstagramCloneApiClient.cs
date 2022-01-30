@@ -76,7 +76,6 @@ namespace InstagramClone.App.Integrations
                 "&imagePath=" + imagePath +
                 "&caption=" + caption;
             Post newPost = new Post(userId, imagePath, caption);
-            Console.WriteLine(requestUri);
             await httpClient.PostAsJsonAsync<Post>(requestUri, newPost);
         }
         public async Task DeletePost(int postId, string imagePath)
@@ -84,7 +83,6 @@ namespace InstagramClone.App.Integrations
             DeleteStoredImage(imagePath);
 
             var requestUri = "Posts?postId=" + postId;
-
             await httpClient.DeleteAsync(requestUri);
         }
 
