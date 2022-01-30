@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Comment>
+
+<div class="text-center">
+    <h1>All Comments Can Be Seen Below</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>PostId</th>
+                <th>AuthorId</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var comment in Model)
+            {
+                <tr>
+                    <td>@comment.Id</td>
+                    <td>@comment.PostId</td>
+                    <td>@comment.AuthorId</td>
+                    <td>@comment.Message</td>
+                    <td>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

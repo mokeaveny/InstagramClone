@@ -86,6 +86,12 @@ namespace InstagramClone.App.Integrations
             await httpClient.DeleteAsync(requestUri);
         }
 
+        public async Task<IEnumerable<Comment>> GetPostComments(int postId)
+        {
+            var requestUri = "Comments/postId?postId=" + postId;
+            return await httpClient.GetFromJsonAsync<List<Comment>>(requestUri);
+        }
+
         public void DeleteStoredImage(string imagePath)
         {
             string deleteFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot//", imagePath);

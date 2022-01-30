@@ -10,11 +10,11 @@ namespace InstagramClone.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CommentController : ControllerBase
+    public class CommentsController : ControllerBase
     {
         private readonly ICommentLogic commentLogic;
 
-        public CommentController(ICommentLogic commentLogic)
+        public CommentsController(ICommentLogic commentLogic)
         {
             this.commentLogic = commentLogic;
         }

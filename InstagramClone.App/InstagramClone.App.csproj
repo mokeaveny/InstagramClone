@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Comments\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

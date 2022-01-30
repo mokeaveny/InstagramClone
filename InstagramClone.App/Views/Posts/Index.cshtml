@@ -19,6 +19,7 @@
                     <td>@post.UserId</td>
                     <td><img src="@post.ImagePath" width="200px" height="200px" /></td>
                     <td>@post.Caption</td>
+                    <td><a asp-controller="Comments" asp-action="Index" asp-route-postId="@post.Id">Comments</a></td>
                     <td><a asp-controller="Posts" asp-action="Delete" asp-route-postId="@post.Id" 
                            asp-route-imagePath="@post.ImagePath">Delete Post</a></td>
                 </tr>

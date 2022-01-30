@@ -16,10 +16,10 @@ namespace InstagramClone.App.Controllers
             this.apiClient = apiClient;
         }
 
-        //public async Task<IActionResult> Index(int postId)
-        //{
-        //    var comments = await apiClient.GetPostComments(postId);
-        //      return View(comments);
-        //}
+        public async Task<IActionResult> Index(int postId)
+        {
+            var comments = await apiClient.GetPostComments(postId);
+            return View(comments);
+        }
     }
 }
