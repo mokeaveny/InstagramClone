@@ -43,7 +43,7 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\.
+      source: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       target: /src
       bind:
         create_host_path: true
@@ -120,7 +120,7 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\.
+      source: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       target: /src
       bind:
         create_host_path: true

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -77,6 +78,20 @@ namespace InstagramClone.App.Integrations
             Post newPost = new Post(userId, imagePath, caption);
             Console.WriteLine(requestUri);
             await httpClient.PostAsJsonAsync<Post>(requestUri, newPost);
+        }
+        public async Task DeletePost(int postId, string imagePath)
+        {
+            DeleteStoredImage(imagePath);
+
+            var requestUri = "Posts?postId=" + postId;
+
+            await httpClient.DeleteAsync(requestUri);
+        }
+
+        public void DeleteStoredImage(string imagePath)
+        {
+            string deleteFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot//", imagePath);
+            File.Delete(deleteFilePath);
         }
     }
 }

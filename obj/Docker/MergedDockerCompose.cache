@@ -1,13 +1,15 @@
 services:
   instagramclone.api:
     build:
-      context: .
+      context: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       dockerfile: InstagramClone.Api/Dockerfile
     depends_on:
       sql_in_dc:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+    networks:
+      default: null
     ports:
     - mode: ingress
       target: 80
@@ -15,13 +17,15 @@ services:
       protocol: tcp
   instagramclone.app:
     build:
-      context: .
+      context: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       dockerfile: InstagramClone.App/Dockerfile
     depends_on:
       seq_in_dc:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+    networks:
+      default: null
     ports:
     - mode: ingress
       target: 80
@@ -29,14 +33,19 @@ services:
       protocol: tcp
   sql_in_dc:
     build:
-      context: .
+      context: C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone
       dockerfile: sql/sql.Dockerfile
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: abcDEF123#
+    networks:
+      default: null
     ports:
     - mode: ingress
       target: 1433
       published: 1440
       protocol: tcp
     restart: always
+networks:
+  default:
+    name: dockercompose12630447708695682427_default

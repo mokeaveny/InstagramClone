@@ -36,8 +36,12 @@ namespace InstagramClone.App.Controllers
             await uploadFile(imageFile);
 
             string uploadedDBPath = "images//" + Path.GetFileName(imageFile.FileName);
-            Console.WriteLine(uploadedDBPath);
             await apiClient.CreatePost(userId, uploadedDBPath, caption);
+        }
+
+        public async Task Delete(int postId, string imagePath)
+        {
+            await apiClient.DeletePost(postId, imagePath);
         }
 
         public async Task uploadFile(IFormFile imageFile)

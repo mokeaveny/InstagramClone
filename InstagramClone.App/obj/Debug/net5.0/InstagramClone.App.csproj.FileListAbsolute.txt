@@ -24,7 +24,6 @@ C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramC
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\InstagramClone.App.TagHelpers.output.cache
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\InstagramClone.App.RazorCoreGenerate.cache
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
