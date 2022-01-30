@@ -26,9 +26,9 @@ namespace InstagramClone.Api.Domain
         {
             return await repo.GetUserPosts(userId);
         }
-        public async Task CreatePost(int userId, byte[] image, string caption)
+        public async Task CreatePost(int userId, string imagePath, string caption)
         {
-            await repo.CreatePost(userId, image, caption);
+            await repo.CreatePost(userId, imagePath, caption);
         }
 
         public async Task DeletePost(int postId)

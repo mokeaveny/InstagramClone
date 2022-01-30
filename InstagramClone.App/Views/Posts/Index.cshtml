@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Post>
+
+<div class="text-center">
+    <h1>All Users Can Be Seen Below</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserId</th>
+                <th>Image</th>
+                <th>Caption</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in Model)
+            {
+            <tr>
+                <td><a asp-controller="Posts" asp-action="Details" asp-route-postId="@post.Id">@post.Id</a></td>
+                <td>@post.UserId</td>
+                <td><img src="@post.ImagePath" width="200px" height="200px" /></td>
+                <td>@post.Caption</td>
+                <td><a asp-controller="Posts" asp-action="Edit" asp-route-postId="@post.Id">Edit</a></td>
+                <td><a asp-controller="Posts" asp-action="CreatePage" asp-route-userId="@post.UserId">Create Post</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="app">
+</div>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                users: [
+                ]
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>

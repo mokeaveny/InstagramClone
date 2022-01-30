@@ -26,8 +26,15 @@ using InstagramClone.App.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\Views\_ViewImports.cshtml"
+using InstagramClone.App.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c7e77c5b69132d1b796f18008c3eaaec7d510b63", @"/Views/User/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0355ff8cefa0f405d1385dded6b9ec2191d21415", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d7ff085cdbf8830f2abbfa663021bae073262931", @"/Views/_ViewImports.cshtml")]
     public class Views_User_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<User>
     {
         #pragma warning disable 1998

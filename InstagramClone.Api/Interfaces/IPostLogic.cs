@@ -10,7 +10,7 @@ namespace InstagramClone.Api.Interfaces
     {
         Task<Post> GetPost(int postId);
         Task<IEnumerable<Post>> GetUserPosts(int userId);
-        Task CreatePost(int userId, byte[] image, string caption);
+        Task CreatePost(int userId, string imagePath, string caption);
         Task DeletePost(int postId);
     }
 }

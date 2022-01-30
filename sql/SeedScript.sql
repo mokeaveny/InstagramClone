@@ -22,7 +22,7 @@ CREATE TABLE [dbo].[Users] (
 CREATE TABLE [dbo].[Posts] (
 	Id int IDENTITY PRIMARY KEY,
 	UserId int FOREIGN KEY REFERENCES Users(Id),
-	Image varbinary(max) NOT NULL,
+	ImagePath varchar(max) NOT NULL,
 	Caption varchar(2200)
 )
 
@@ -42,14 +42,14 @@ VALUES ('testapi', 'testapi@gmail.co.uk', 'Magic', 'Amazing', 35, 3.82)
 INSERT INTO dbo.Users(Username, Email, Forename, Surname, Age, Rating)
 VALUES ('jhalpert', 'jhalpert00@dmifflin.com', 'Jim', 'Halpert', 28, 4.50)
 
-INSERT INTO dbo.Posts(UserId, Image, Caption)
-VALUES (1, 0xFFD8FFE000104A6494600001001, 'First Picture!')
+INSERT INTO dbo.Posts(UserId, ImagePath, Caption)
+VALUES (1, 'Fake Url', 'First Picture!')
 
-INSERT INTO dbo.Posts(UserId, Image, Caption)
-VALUES (2, 0xFFD8FFE000104A6494600001001, 'Placeholder For Now!')
+INSERT INTO dbo.Posts(UserId, ImagePath, Caption)
+VALUES (2, 'Another Fake Url', 'Placeholder For Now!')
 
-INSERT INTO dbo.Posts(UserId, Image, Caption)
-VALUES (3, 0xFFD8FFE000104A6494600001001, 'Remember To Insert Proper Values')
+INSERT INTO dbo.Posts(UserId, ImagePath, Caption)
+VALUES (3, 'Oh wow, another fake url!', 'Remember To Insert Proper Values')
 
 INSERT INTO dbo.Comments(PostId, AuthorId, Message)
 VALUES(1, 3, 'Nice Post Mate!');

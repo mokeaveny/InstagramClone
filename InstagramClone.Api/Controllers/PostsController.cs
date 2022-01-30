@@ -10,11 +10,11 @@ namespace InstagramClone.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PostController : ControllerBase
+    public class PostsController : ControllerBase
     {
         private readonly IPostLogic postLogic;
 
-        public PostController(IPostLogic postLogic)
+        public PostsController(IPostLogic postLogic)
         {
             this.postLogic = postLogic;
         }
@@ -32,10 +32,9 @@ namespace InstagramClone.Api.Controllers
         }
 
         [HttpPost]
-        public async Task CreatePost(int userId, string image, string caption)
+        public async Task CreatePost(int userId, string imagePath, string caption)
         {
-            byte[] imageByteFormat = Convert.FromBase64String(image);
-            await postLogic.CreatePost(userId, imageByteFormat, caption);
+            await postLogic.CreatePost(userId, imagePath, caption);
         }
 
         [HttpDelete]

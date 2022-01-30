@@ -59,5 +59,24 @@ namespace InstagramClone.App.Integrations
             User currentUser = await GetUser(userId);
             await httpClient.PutAsJsonAsync<User>(requestUri, currentUser);
         }
+        public async Task<Post> GetPost(int postId)
+        {
+            var requestUri = "Posts/postId?postId=" + postId;
+            return await httpClient.GetFromJsonAsync<Post>(requestUri);
+        }
+        public async Task<IEnumerable<Post>> GetUserPosts(int userId)
+        {
+            var requestUri = "Posts/userId?userId=" + userId;
+            return await httpClient.GetFromJsonAsync<List<Post>>(requestUri);
+        }
+        public async Task CreatePost(int userId, string imagePath, string caption)
+        {
+            var requestUri = "Posts?userId=" + userId + 
+                "&imagePath=" + imagePath +
+                "&caption=" + caption;
+            Post newPost = new Post(userId, imagePath, caption);
+            Console.WriteLine(requestUri);
+            await httpClient.PostAsJsonAsync<Post>(requestUri, newPost);
+        }
     }
 }

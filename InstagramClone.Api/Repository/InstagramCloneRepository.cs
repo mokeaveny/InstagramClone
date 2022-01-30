@@ -76,14 +76,14 @@ namespace InstagramClone.Api.Repository
                 new { userId })).ToList();
         }
 
-        public async Task CreatePost(int userId, byte[] image, string caption)
+        public async Task CreatePost(int userId, string imagePath, string caption)
         {
             await db.ExecuteScalarAsync<int>(
-                "INSERT INTO dbo.Posts (UserId, Image, Caption) VALUES " +
-                                        "(@UserId, @Image, @Caption)", new
+                "INSERT INTO dbo.Posts (UserId, ImagePath, Caption) VALUES " +
+                                        "(@UserId, @ImagePath, @Caption)", new
                                         {
                                             userId,
-                                            image,
+                                            imagePath,
                                             caption
                                         });
         }
