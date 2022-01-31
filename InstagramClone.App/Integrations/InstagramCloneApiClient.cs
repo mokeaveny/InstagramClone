@@ -86,10 +86,39 @@ namespace InstagramClone.App.Integrations
             await httpClient.DeleteAsync(requestUri);
         }
 
+        public async Task<Comment> GetComment(int commentId)
+        {
+            var requestUri = "Comments/commentId?commentId=" + commentId;
+            return await httpClient.GetFromJsonAsync<Comment>(requestUri);
+        }
+
+        public async Task<IEnumerable<Comment>> GetUserComments(int userId)
+        {
+            var requestUri = "Comments/userId?userId=" + userId;
+            return await httpClient.GetFromJsonAsync<List<Comment>>(requestUri);
+        }
+
         public async Task<IEnumerable<Comment>> GetPostComments(int postId)
         {
             var requestUri = "Comments/postId?postId=" + postId;
             return await httpClient.GetFromJsonAsync<List<Comment>>(requestUri);
+        }
+
+        public async Task CreateComment(int postId, int authorId, string message)
+        {
+            Comment newComment = new Comment(postId, authorId, message);
+
+            var requestUri = "Comments?postId=" + postId +
+                "&authorId=" + authorId +
+                "&message=" + message;
+
+            await httpClient.PostAsJsonAsync<Comment>(requestUri, newComment);
+        }
+
+        public async Task DeleteComment(int commentId)
+        {
+            var requestUri = "Comments?commentId=" + commentId;
+            await httpClient.DeleteAsync(requestUri);
         }
 
         public void DeleteStoredImage(string imagePath)

@@ -16,10 +16,10 @@ namespace InstagramClone.App.Integrations
         Task<IEnumerable<Post>> GetUserPosts(int userId);
         Task CreatePost(int userId, string imagePath, string caption);
         Task DeletePost(int postId, string imagePath);
-        //Task<Comment> GetComment(int commentId);
-        //Task<IEnumerable<Comment>> GetUserComments(int userId);
+        Task<Comment> GetComment(int commentId);
+        Task<IEnumerable<Comment>> GetUserComments(int userId);
         Task<IEnumerable<Comment>> GetPostComments(int postId);
-        //Task CreateComment(int postId, int authorId, string message);
-        //Task DeleteComment(int commentId);
+        Task CreateComment(int postId, int authorId, string message);
+        Task DeleteComment(int commentId);
     }
 }

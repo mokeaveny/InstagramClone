@@ -43,7 +43,7 @@ namespace InstagramClone.Api.Controllers
             await commentLogic.CreateComment(postId, authorId, message);
         }
 
-        [HttpDelete("commentId")]
+        [HttpDelete]
         public async Task DeleteComment(int commentId)
         {
             await commentLogic.DeleteComment(commentId);

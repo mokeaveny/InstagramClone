@@ -44,3 +44,4 @@ C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramC
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Posts\Index.cshtml.g.cs
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Posts\CreatePage.cshtml.g.cs
 C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Comments\Index.cshtml.g.cs
+C:\Users\micha\Documents\Microservices\Docker Projects\InstagramClone\InstagramClone.App\obj\Debug\net5.0\Razor\Views\Comments\CreatePage.cshtml.g.cs

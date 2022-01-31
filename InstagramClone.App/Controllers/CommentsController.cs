@@ -21,5 +21,15 @@ namespace InstagramClone.App.Controllers
             var comments = await apiClient.GetPostComments(postId);
             return View(comments);
         }
+
+        public IActionResult CreatePage()
+        {
+            return View();
+        }
+
+        public async Task Create(int postId, int authorId, string message)
+        {
+            await apiClient.CreateComment(postId, authorId, message);
+        }
     }
 }
