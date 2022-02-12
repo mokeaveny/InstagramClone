@@ -22,7 +22,14 @@ namespace InstagramClone.App.Controllers
         public async Task<IActionResult> Index(int userId)
         {
             var posts = await apiClient.GetUserPosts(userId);
-            return View(posts);
+            if (posts.Any() == false)
+            {
+                return Redirect("Posts/NoPosts");
+            }
+            else
+            {
+                return View(posts);
+            }
         }
 
         public IActionResult CreatePage(int userId)
@@ -50,6 +57,11 @@ namespace InstagramClone.App.Controllers
             string uploadFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot//images", fileName);
             var fileStream = new FileStream(uploadFilePath, FileMode.Create);
             await imageFile.CopyToAsync(fileStream);
+        }
+
+        public IActionResult NoPosts()
+        {
+            return View();
         }
     }
 }

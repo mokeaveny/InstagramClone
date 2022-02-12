@@ -26,7 +26,6 @@ namespace InstagramClone.App.Controllers
         public async Task<IActionResult> Details(int userId)
         {
             var user = await apiClient.GetUser(userId);
-            Console.WriteLine(userId);
             return View(user);
         }
 
@@ -48,8 +47,6 @@ namespace InstagramClone.App.Controllers
 
         public async Task Update(int userId, string username, string email, string forename, string surname, int age, decimal rating)
         {
-            Console.WriteLine(userId);
-            Console.WriteLine(username);
             await apiClient.UpdateUser(userId, username, email, forename, surname, age, rating);
         }
     }
