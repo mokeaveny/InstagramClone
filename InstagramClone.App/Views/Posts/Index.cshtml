@@ -1,46 +1,41 @@
 ﻿@model IEnumerable<Post>
 
-<div class="text-center">
-    <h1>All Users Can Be Seen Below</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>UserId</th>
-                <th>Image</th>
-                <th>Caption</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var post in Model)
-            {
-                <tr>
-                    <td>@post.Id</td>
-                    <td>@post.UserId</td>
-                    <td><img src="@post.ImagePath" width="200px" height="200px" /></td>
-                    <td>@post.Caption</td>
-                    <td><a asp-controller="Comments" asp-action="Index" asp-route-postId="@post.Id">Comments</a></td>
-                    <td><a asp-controller="Posts" asp-action="Delete" asp-route-postId="@post.Id" 
-                           asp-route-imagePath="@post.ImagePath">Delete Post</a></td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <td><a asp-controller="Posts" asp-action="CreatePage" asp-route-userId="@Model.First().UserId">Create Post</a></td>
-</div>
+<head>
+    <link rel="stylesheet" href="~/css/postsindex.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
 
-<div id="app">
-</div>
-
-<script>
-    const app = Vue.createApp({
-        data() {
-            return {
-                users: [
-                ]
-            }
-        }
-    })
-
-    app.mount('#app')
-</script>
+<body>
+    <main>
+        <div class="text-center">
+            <h1>All Posts Can Be Seen Below</h1>
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>UserId</th>
+                        <th>Image</th>
+                        <th>Caption</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var post in Model)
+                    {
+                        <tr>
+                            <td>@post.Id</td>
+                            <td>@post.UserId</td>
+                            <td><img src="@post.ImagePath" width="200px" height="200px" /></td>
+                            <td>@post.Caption</td>
+                            <td><a asp-controller="Comments" asp-action="Index" asp-route-postId="@post.Id">Comments</a></td>
+                            <td><a asp-controller="Posts" asp-action="Delete" asp-route-postId="@post.Id" 
+                                   asp-route-imagePath="@post.ImagePath">Delete Post</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a asp-controller="Posts" asp-action="CreatePage" asp-route-userId="@Model.First().UserId">Create Post</a>
+        </div>
+    </main>
+</body>
